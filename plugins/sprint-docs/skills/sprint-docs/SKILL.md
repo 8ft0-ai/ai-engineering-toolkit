@@ -1,11 +1,11 @@
 ---
 name: sprint-docs
-description: Create or update NextDayEURUSD sprint plans, implementation reports, and backlog links using templates and consistent structure.
+description: Create or update <project_name> sprint plans, implementation reports, and backlog links using templates and consistent structure.
 metadata:
   short-description: Draft and update sprint docs
 ---
 
-# NextDayEURUSD Sprint Docs
+# <project_name> Sprint Docs
 
 Use this skill when creating or updating sprint plans and implementation reports in your repo’s sprint docs folder (default: `planning/`).
 
@@ -18,7 +18,7 @@ Use this skill when creating or updating sprint plans and implementation reports
 
 ## Manual workflow
 
-- Copy templates from `assets/` into `projects/NextDayEURUSD/planning/`.
+- Copy templates from `assets/` into `projects/<project_name>/planning/`.
 - Replace placeholders (e.g., `{{SPRINT_ID}}`, `{{SPRINT_TITLE}}`, `{{SPRINT_FOCUS}}`, `{{DATE}}`).
 - Keep the stage/goal/exit-criteria structure consistent with previous sprints.
 - Include a `Related:` line linking to the prior sprint plan/report and `BACKLOG.md`.
