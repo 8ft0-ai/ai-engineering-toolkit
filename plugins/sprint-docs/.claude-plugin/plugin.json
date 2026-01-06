@@ -1,0 +1,14 @@
+{
+  "name": "sprint-docs",
+  "version": "0.1.0",
+  "description": "Sprint documentation generator (plan + implementation report).",
+  "keywords": [
+    "planning",
+    "sprints",
+    "docs"
+  ],
+  "license": "MIT",
+  "commands": [
+    "./commands/new-sprint.md"
+  ]
+}
