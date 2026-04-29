@@ -1,0 +1,14 @@
+{
+  "name": "sprint-docs-marketplace",
+  "owner": {
+    "name": "CHANGE_ME"
+  },
+  "plugins": [
+    {
+      "name": "sprint-docs",
+      "source": "./plugins/sprint-docs",
+      "description": "Generate sprint plan + implementation report docs from templates",
+      "version": "0.1.0"
+    }
+  ]
+}
