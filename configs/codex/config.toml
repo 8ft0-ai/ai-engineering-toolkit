@@ -1,0 +1,204 @@
+model = "gpt-5.3-codex"
+model_reasoning_effort = "medium"
+personality = "pragmatic"
+approvals_reviewer = "guardian_subagent"
+
+
+# Default profile
+#profile = "or-nemotron"
+#model_provider = "openrouter"
+
+[model_providers.openrouter]
+name = "openrouter"
+base_url = "https://openrouter.ai/api/v1"
+env_key = "OPENROUTER_API_KEY"
+wire_api = "responses"
+
+[profiles.or-qwen3-coder]
+model_provider = "openrouter"
+model = "qwen/qwen3-coder:free"
+model_reasoning_effort = "high"
+
+[profiles.or-nemotron]
+model_provider = "openrouter"
+model = "nvidia/nemotron-3-super-120b-a12b:free"
+model_reasoning_effort = "high"
+
+[profiles.or-step-flash]
+model_provider = "openrouter"
+model = "stepfun/step-3.5-flash:free"
+model_reasoning_effort = "medium"
+
+# MCP =====================================================
+
+[mcp_servers.notion]
+url = "https://mcp.notion.com/mcp"
+
+[mcp_servers.linear]
+url = "https://mcp.linear.app/mcp"
+
+[mcp_servers.linear.tools.save_project]
+approval_mode = "approve"
+
+[mcp_servers.linear.tools.save_milestone]
+approval_mode = "approve"
+
+[mcp_servers.linear.tools.save_issue]
+approval_mode = "approve"
+
+#[mcp_servers.netlify]
+#command = "npx"
+#args = ["-y", "@netlify/mcp"]
+
+[mcp_servers.playwright]
+command = "npx"
+args = ["-y", "@playwright/mcp@latest"]
+
+[features]
+rmcp_client = true
+unified_exec = true
+
+# PROJECTS ================================================
+
+[projects."/Users/jan/tmp"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/8ft0-ai/EXFormer"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/8ft0-ai/PropPilot"]
+trust_level = "trusted"
+
+[projects."/Users/jan/cAlgo"]
+trust_level = "trusted"
+
+[projects."/Users/jan/cAlgo/Sources/Robots/FTMO-sandbox/FTMO-sandbox"]
+trust_level = "trusted"
+
+[projects."/Users/jan/sandbox/trading/nautechsystems/sandbox"]
+trust_level = "trusted"
+
+[projects."/Users/jan"]
+trust_level = "trusted"
+
+[projects."/Users/jan/sandbox/AI/openai/symphony"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/8ft0-ai/openai-symphony-bian-service-request-portal"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/workspaces/symphony"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/workspaces/symphony/EXR-4"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/workspaces/symphony/EXR-5"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/workspaces/symphony/EXR-6"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/workspaces/symphony/EXR-8"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/workspaces/symphony/EXR-11"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/workspaces/symphony/EXR-16"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/workspaces/symphony/EXR-17"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/workspaces/symphony/EXR-18"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/8ft0-ai/symphony"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/workspaces/symphony/EXR-21"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/workspaces/symphony/EXR-23"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/workspaces/symphony/EXR-26"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/workspaces/symphony/EXR-24"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/workspaces/symphony/EXR-25"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/workspaces/symphony/EXR-28"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/workspaces/symphony/EXR-31"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/workspaces/symphony/EXR-32"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/workspaces/symphony/EXR-29"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/workspaces/symphony/EXR-37"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/workspaces/symphony/EXR-42"]
+trust_level = "trusted"
+
+[projects."/Users/jan/.config/opencode/scripts"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/workspaces/symphony/EXR-33"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/workspaces/symphony/EXR-35"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/workspaces/symphony/EXR-34"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/workspaces/symphony/EXR-36"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/workspaces/symphony/EXR-38"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/workspaces/symphony/EXR-43"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/workspaces/symphony/EXR-44"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/workspaces/symphony/EXR-45"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/workspaces/symphony/EXR-47"]
+trust_level = "trusted"
+
+[projects."/Users/jan/dev/8ft0-ai/simple-bank-demo"]
+trust_level = "trusted"
+
+[notice.model_migrations]
+"gpt-5.2" = "gpt-5.4"
+"gpt-5.3-codex" = "gpt-5.4"
+"gpt-5.2-codex" = "gpt-5.4"
+
+[plugins."github@openai-curated"]
+enabled = true
+
+[plugins."google-drive@openai-curated"]
+enabled = true
+
+[apps.connector_76869538009648d5b282a4bb21c3d157.tools.github_create_pull_request]
+approval_mode = "approve"
+
+[apps.connector_76869538009648d5b282a4bb21c3d157.tools.github_add_comment_to_issue]
+approval_mode = "approve"
+
+[tui.model_availability_nux]
+"gpt-5.5" = 4

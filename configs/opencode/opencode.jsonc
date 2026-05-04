@@ -1,0 +1,177 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+
+  // Daily-driver defaults
+  "model": "nvidia-openai/qwen/qwen3-coder-480b-a35b-instruct",
+  "small_model": "google/gemini-3.1-flash-lite-preview",
+  "default_agent": "build",
+
+  // Safer default; change bash to "allow" only when benchmarking trusted repos
+  "permission": {
+    "edit": "ask",
+    "bash": "ask",
+    "webfetch": "ask",
+    "question": "allow"
+  },
+
+  "provider": {
+    "litellm": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "LiteLLM",
+      "options": {
+        "baseURL": "http://localhost:4000",
+        "apiKey": "{env:LITELLM_MASTER_KEY}",
+        "timeout": 600000,
+        "chunkTimeout": 90000
+      },
+      "models": {
+        "qwen/qwen3-coder-480b-a35b-instruct": {
+          "name": "Qwen3 Coder 480B via LiteLLM"
+        },
+        "deepseek-ai/deepseek-v4-flash": {
+          "name": "DeepSeek V4 Flash via LiteLLM"
+        },
+        "gemini-3.1-flash-lite-preview": {
+          "name": "Gemini 3.1 Flash-Lite via LiteLLM"
+        },
+        "qwen2.5-coder:7b": {
+          "name": "Qwen2.5 Coder 7B Local via LiteLLM"
+        }
+      }
+    },
+
+    "google": {
+      "options": {
+        "apiKey": "{env:GEMINI_API_KEY}",
+        "timeout": 600000,
+        "chunkTimeout": 90000
+      },
+      "models": {
+        "gemini-3.1-flash-lite-preview": {
+          "name": "Gemini 3.1 Flash-Lite Preview",
+          "limit": {
+            "context": 1048576,
+            "output": 65536
+          }
+        },
+        "gemini-2.5-flash": {
+          "name": "Gemini 2.5 Flash"
+        },
+        "gemini-2.5-flash-lite": {
+          "name": "Gemini 2.5 Flash-Lite"
+        }
+      }
+    },
+
+    "deepseek": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "DeepSeek",
+      "options": {
+        "baseURL": "https://api.deepseek.com",
+        "apiKey": "{env:DEEPSEEK_API_KEY}",
+        "timeout": 600000,
+        "chunkTimeout": 90000
+      },
+      "models": {
+        "deepseek-v4-flash": {
+          "name": "DeepSeek V4 Flash",
+          "limit": {
+            "context": 1000000,
+            "output": 384000
+          }
+        },
+        "deepseek-v4-pro": {
+          "name": "DeepSeek V4 Pro",
+          "limit": {
+            "context": 1000000,
+            "output": 384000
+          }
+        }
+      }
+    },
+
+    "nvidia-openai": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "NVIDIA NIM",
+      "options": {
+        "baseURL": "https://integrate.api.nvidia.com/v1",
+        "apiKey": "{env:NVIDIA_API_KEY}",
+        "timeout": 600000,
+        "chunkTimeout": 90000
+      },
+      "models": {
+        "qwen/qwen3-coder-480b-a35b-instruct": {
+          "name": "Qwen3 Coder 480B A35B",
+          "limit": {
+            "context": 262144,
+            "output": 65536
+          }
+        },
+        "deepseek-ai/deepseek-v4-flash": {
+          "name": "DeepSeek V4 Flash on NVIDIA"
+        },
+        "deepseek-ai/deepseek-v4-pro": {
+          "name": "DeepSeek V4 Pro on NVIDIA"
+        },
+        "mistralai/devstral-2-123b-instruct-2512": {
+          "name": "Devstral 2 123B"
+        },
+        "moonshotai/kimi-k2-thinking": {
+          "name": "Kimi K2 Thinking"
+        },
+        "z-ai/glm-4.7": {
+          "name": "GLM 4.7"
+        },
+        "minimaxai/minimax-m2.7": {
+          "name": "MiniMax M2.7"
+        }
+      }
+    },
+
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama Local",
+      "options": {
+        "baseURL": "http://localhost:11434/v1",
+        "timeout": 600000,
+        "chunkTimeout": 90000
+      },
+      "models": {
+        "qwen2.5-coder:7b": {
+          "name": "Qwen2.5 Coder 7B Local"
+        }
+      }
+    },
+
+    "groq": {
+      "options": {
+        "apiKey": "{env:GROQ_API_KEY}",
+        "timeout": 600000,
+        "chunkTimeout": 90000
+      },
+      "models": {
+        "llama-3.3-70b-versatile": {},
+        "openai/gpt-oss-120b": {},
+        "openai/gpt-oss-20b": {}
+      }
+    },
+
+    "openrouter": {
+      "options": {
+        "apiKey": "{env:OPENROUTER_API_KEY}",
+        "timeout": 600000,
+        "chunkTimeout": 90000
+      },
+      "models": {
+        "nvidia/nemotron-3-nano-30b-a3b:free": {},
+        "nvidia/nemotron-nano-9b-v2:free": {},
+        "qwen/qwen3-coder:free": {},
+        "openai/gpt-oss-120b:free": {},
+        "nvidia/nemotron-3-super-120b-a12b:free": {},
+        "openai/gpt-oss-20b:free": {},
+        "z-ai/glm-4.5-air:free": {},
+        "arcee-ai/trinity-large-preview:free": {}
+      }
+    }
+  }
+}

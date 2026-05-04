@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "name": "claude-settings",
+      "kind": "file",
+      "repo_path": "configs/claude/settings.json",
+      "target_path": "~/.claude/settings.json"
+    },
+    {
+      "name": "codex-config",
+      "kind": "file",
+      "repo_path": "configs/codex/config.toml",
+      "target_path": "~/.codex/config.toml"
+    },
+    {
+      "name": "litellm-config",
+      "kind": "file",
+      "repo_path": "configs/litellm/litellm_config.yaml",
+      "target_path": "~/.config/litellm/litellm_config.yaml"
+    },
+    {
+      "name": "opencode-config",
+      "kind": "file",
+      "repo_path": "configs/opencode/opencode.jsonc",
+      "target_path": "~/.config/opencode/opencode.jsonc"
+    },
+    {
+      "name": "opencode-system-reminder",
+      "kind": "file",
+      "repo_path": "configs/opencode/docs/system-reminder.md",
+      "target_path": "~/.config/opencode/docs/system-reminder.md"
+    },
+    {
+      "name": "opencode-model-notes",
+      "kind": "file",
+      "repo_path": "configs/opencode/models.md",
+      "target_path": "~/.config/opencode/models.md"
+    },
+    {
+      "name": "codex-skills",
+      "kind": "directory",
+      "repo_path": "configs/codex/skills",
+      "target_path": "~/.codex/skills"
+    },
+    {
+      "name": "claude-skills",
+      "kind": "directory",
+      "repo_path": "configs/claude/skills",
+      "target_path": "~/.claude/skills"
+    },
+    {
+      "name": "claude-commands",
+      "kind": "directory",
+      "repo_path": "configs/claude/commands",
+      "target_path": "~/.claude/commands"
+    }
+  ]
+}
